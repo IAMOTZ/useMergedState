@@ -1,5 +1,5 @@
 # useClassState
-A replica of the [React State Hook](https://reactjs.org/docs/hooks-state.html) but with the power of merging.
+A replica of the [React State Hook](https://reactjs.org/docs/hooks-state.html) but with the power of merging state.
 
 ## What is React State Hook?
 If you already know about React Hooks, you can skip this section and if not, continue reading.  
