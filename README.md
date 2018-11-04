@@ -1,5 +1,5 @@
-# useClassState
-A replica of the [React State Hook](https://reactjs.org/docs/hooks-state.html) but with the power of merging state.
+# useMergedState
+A replica of the [React State Hook](https://reactjs.org/docs/hooks-state.html) but with the power of merging.
 
 ## What is React State Hook?
 If you already know about React Hooks, you can skip this section and if not, continue reading.  
@@ -20,23 +20,23 @@ setUserInfo({age: 27});
 // userInfo => {age: 27}
 ```
 The replacing behavior of `useState` is very well argued to be a befitting one on the [State Hook documentation](https://reactjs.org/docs/hooks-state.html), however, I strongly believe that there are a lot of valid scenarios where developers would want to merge stuff to the state(without going the redux way) as opposed to replacing the state.  
-If you are one of the folks that gets limited with the replacing behaviour of `useState`, then `useClassState` is just for you.
+If you are one of the folks that gets limited with the replacing behaviour of `useState`, then `useMergedState` is just for you.
 
 
 
-## `useClassState` is Here to Help :sparkles:
-`useClassState` makes it possible to merge states(when they are objects).  
-If the previous state and the new state are both objects, `userClassState` is going to merge the states(just like `this.setState`) but if they are not, it is simply going to replace the previous state with the new one(the default behaviour of `useState`).  
+## `useMergedState` is Here to Help :sparkles:
+`useMergedState` makes it possible to merge states(when they are objects).  
+If the previous state and the new state are both objects, `useMergedState` is going to merge the states(just like `this.setState`) but if they are not, it is simply going to replace the previous state with the new one(the default behaviour of `useState`).  
 Example(merging states): 
 ```
-const [userInfo, setUserInfo] = useClassState({ name: 'Dan', age: 26 });
+const [userInfo, setUserInfo] = useMergedState({ name: 'Dan', age: 26 });
 // userInfo => { name: 'Dan', age: 26 }
 setUserInfo({age: 27});
 // userInfo => { name: 'Dan', age: 27 }
 ```
 Example(roll back to default behaviour): 
 ```
-const [name, setName] = useClassState('Dan');
+const [name, setName] = useMergedState('Dan');
 // name => 'Dan'
 setName('Abramov');
 // name => 'Abramov'

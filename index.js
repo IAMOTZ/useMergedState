@@ -1,9 +1,9 @@
 /* 
-  useClassState
+  useMergedState
   This is just like the useState Hook with the power of Merging.
 */
 
-const useClassState = (initialState) => {
+const useMergedState = (initialState) => {
   const [state, setter] = useState(initialState);
   let setState = setter;
   if (state.constructor.name === 'Object') {
