@@ -3,7 +3,7 @@
   This is just like the useState Hook with the power of Merging.
 */
 
-const useMergedState = (initialState) => {
+exports.useMergedState = (initialState) => {
   const [state, setter] = useState(initialState);
   let setState = setter;
   if (state.constructor.name === 'Object') {
