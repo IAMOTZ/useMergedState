@@ -1,9 +1,6 @@
-/* 
-  useMergedState
-  This is just like the useState Hook with the power of Merging.
-*/
+const { useState } = require('react');
 
-exports.useMergedState = (initialState) => {
+const useMergedState = (initialState) => {
   const [state, setter] = useState(initialState);
   let setState = setter;
   if (state.constructor.name === 'Object') {
@@ -20,3 +17,5 @@ exports.useMergedState = (initialState) => {
   }
   return [state, setState];
 };
+
+module.exports = useMergedState; 

@@ -21,5 +21,8 @@
   "bugs": {
     "url": "https://github.com/IAMOTZ/useMergedState/issues"
   },
-  "homepage": "https://github.com/IAMOTZ/useMergedState#readme"
+  "homepage": "https://github.com/IAMOTZ/useMergedState#readme",
+  "dependencies": {
+    "react": "^16.7.0-alpha.0"
+  }
 }
