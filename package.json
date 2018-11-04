@@ -1,6 +1,6 @@
 {
   "name": "usemergedstate",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "A replica of the React State Hook with the power of merging states",
   "main": "index.js",
   "scripts": {
